@@ -5,8 +5,8 @@ import pandas as pd
 import os
 import queue
 
-# 🛰️ UPDATE APP NAME HERE: Replace 'YOUR_NEW_NAME' with your chosen name
-APP_NAME = "YOUR_NEW_NAME"
+# Locked in your actual project name cleanly!
+APP_NAME = "NEXA VOICE"
 
 st.set_page_config(page_title=f"{APP_NAME} - Transceiver", layout="wide")
 
@@ -57,7 +57,7 @@ with col1:
             st.session_state['audio_queue'].put(indata.copy())
 
         if not st.session_state['is_recording']:
-            if st.button("突 PUSH TO TALK", use_container_width=True):
+            if st.button("🎤 PUSH TO TALK", use_container_width=True):
                 st.session_state['is_recording'] = True
                 st.session_state['audio_queue'] = queue.Queue()
                 st.rerun()
